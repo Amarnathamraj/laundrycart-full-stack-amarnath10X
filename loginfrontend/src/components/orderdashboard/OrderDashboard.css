@@ -1,0 +1,21 @@
+
+
+.dashboard-container {
+  position: static; 
+  overflow: visible; 
+  width: 100%;
+  height: calc(100vh - 120px); 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.create {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #4a3b76;
+  color: white;
+}
