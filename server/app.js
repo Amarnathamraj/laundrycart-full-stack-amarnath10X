@@ -8,6 +8,8 @@ const cors = require('cors');
 
 const app = express();
 
+const productRoutes = require('./routes/product');
+app.use('/', productRoutes); // or '/api' if you want /api/products
 
 app.use(cors());
 app.use(express.json());
