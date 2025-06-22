@@ -24,7 +24,9 @@ const Login = ({ setToken }) => {
     }
 
     try {
-      const res = await axios.post("https://laundrycardbackend-production.up.railway.app/login", user);
+      const res = await axios.post("https://laundrycart-full-stack-amarnath10x-1.onrender.com/login", user);
+
+      // const res = await axios.post("https://laundrycardbackend-production.up.railway.app/login", user);
       alert("Login successful");
       console.log(res)
       console.log(res.data.token)

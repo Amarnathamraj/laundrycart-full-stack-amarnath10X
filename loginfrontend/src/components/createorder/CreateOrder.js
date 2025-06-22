@@ -49,7 +49,9 @@ function CreateOrder({ onClose }) {
   ];
 
   useEffect(() => {
-    fetch('https://laundrycardbackend-production.up.railway.app/products')
+  fetch('https://laundrycart-full-stack-amarnath10x-1.onrender.com/products')
+  
+    // fetch('https://laundrycardbackend-production.up.railway.app/products')
       .then(res => res.json())
       .then(data => {
         setProducts(data);
@@ -216,8 +218,8 @@ function CreateOrder({ onClose }) {
           price: calculatePrice(product._id),
         })),
     };
-
-    fetch('https://laundrycardbackend-production.up.railway.app/orders', {
+fetch('https://laundrycart-full-stack-amarnath10x-1.onrender.com/orders',{
+   // fetch('https://laundrycardbackend-production.up.railway.app/orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

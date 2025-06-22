@@ -34,7 +34,9 @@ function OrderComponent({ userId }) {
     }
 
     setLoading(true);
-    fetch(`https://laundrycardbackend-production.up.railway.app/orders?userId=${userId}`)
+
+    fetch(`https://laundrycart-full-stack-amarnath10x-1.onrender.com/orders?userId=${userId}`)
+  //  fetch(`https://laundrycardbackend-production.up.railway.app/orders?userId=${userId}`)
       .then(res => {
         if (!res.ok) {
           throw new Error(`Server error: ${res.status}`);
@@ -171,7 +173,8 @@ function OrderComponent({ userId }) {
   const handleConfirmCancellation = () => {
     if (!selectedOrder || selectedOrder.status !== 'Ready to Pickup') return;
 
-    fetch(`https://laundrycardbackend-production.up.railway.app/orders/${selectedOrder.orderId}`, {
+    fetch(`https://laundrycart-full-stack-amarnath10x-1.onrender.com/orders/${selectedOrder.orderId}`, {
+    //fetch(`https://laundrycardbackend-production.up.railway.app/orders/${selectedOrder.orderId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

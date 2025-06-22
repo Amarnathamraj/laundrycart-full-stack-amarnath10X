@@ -21,7 +21,9 @@ const Register = () => {
   const handlesubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://laundrycardbackend-production.up.railway.app/register", {
+      const res = await fetch("https://laundrycart-full-stack-amarnath10x-1.onrender.com/register", {
+
+     // const res = await fetch("https://laundrycardbackend-production.up.railway.app/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
