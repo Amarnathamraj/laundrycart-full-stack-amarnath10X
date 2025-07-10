@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
   orderId: { type: String, required: true, unique: true },
-  userId: { type: String, required: true },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'userCollection', required: true }, // 🔗 Reference user
+   userId: { type: String, required: true },
   orderDateTime: { type: String, required: true },
   storeLocation: { type: String, required: true },
   city: { type: String, required: true },

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Product = require('./model/Product');
+const Product = require('./model/product');
 
 mongoose.connect('mongodb://localhost:27017/laundry', {
   useNewUrlParser: true,
